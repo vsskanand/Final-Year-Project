@@ -54,12 +54,35 @@ class Cipher3 {
 
 
 
-public class SemProj
+public class Sem1
 {
 	public static void main(String args[])
 	{
+		 
+		 
+		 
+		char PT;
+        String plainText="";
+        String PT1="";
+        //Cipher3 c =new Cipher3();
+        File file = new File(args[0]);
+        if (!file.exists()) {
+            System.out.println(args[0] + " does not exist.");
+            return;
+        }
+        if (!(file.isFile() && file.canRead())) {
+            System.out.println(file.getName() + " cannot be read from.");
+            return;
+        }
+        try {
+            FileInputStream fis = new FileInputStream(file);
+            
+            while (fis.available() > 0) {
+		 
+		 
+		 
 		 String LetterKey = "LEARN";
-		 String plainText = "BAPATLA BAPATLA BAPATLA";
+		 //String plainText = "BAPATLA BAPATLA BAPATLA";
 		 
 		 
 	     String Numberedkey="3";
@@ -94,5 +117,9 @@ public class SemProj
 				}
 				System.out.println(""+FinalAnswer);
 		}
-
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
 }
