@@ -54,7 +54,7 @@ class Cipher3 {
 
 
 
-public class Sem1
+public class SemProj
 {
 	public static void main(String args[])
 	{
