@@ -77,6 +77,7 @@ public class SemProj1
         char PT;
         String plainText="";
         String PT1="";
+        String finalAnswer1="";
         Cipher3 c =new Cipher3();
         File file = new File(args[0]);
         if (!file.exists()) {
@@ -97,21 +98,21 @@ public class SemProj1
                 
                 
                 
-                // System.out.print(plaintText+"\n");
-                String LetterKey = "LEARN";
+                //System.out.print(plaintText+"\n");
+                String LetterKey = "ITDEPARTMENT";
                 //String plainText = "c+x-g=u";
                 
-                String Numberedkey="3";
+                String Numberedkey="470";
                 
                 
                 String semiParialCipher=c.Keyencode(LetterKey , Integer.parseInt(Numberedkey));//caesar cipher -> OHDUQ
                 
                 String partialCipher = c.VigenereDecrypt(plainText, semiParialCipher);// vigenere cipher
                 
-                System.out.println("\n Final Key:     "+semiParialCipher );
+                //System.out.println("\n Final Key:     "+semiParialCipher );
                 
                 char samp = plainText.charAt(0); // First letter
-                System.out.println("\n EX - OR of first letter i.e :  "+samp+" and "+ Numberedkey+" we get "+samp+"\n");
+                //System.out.println("\n EX - OR of first letter i.e :  "+samp+" and "+ Numberedkey+" we get "+samp+"\n");
                 
                 //String sPartial=partialCipher;// why ??
                 
@@ -126,7 +127,7 @@ public class SemProj1
                 
                 String finalCipher;
                 
-                System.out.println(" Final Cipher is : ");
+                //System.out.println(" Final Cipher is : ");
                 for(int i=1;i<sPartial.length();i++) // ex-or operation for remaining  elements in string
                     
                 {
@@ -138,16 +139,18 @@ public class SemProj1
                     res=res.concat(finalCipher);		
                 }
                 
-                System.out.println(""+res+"\n");
+                //System.out.println(""+res+"\n");
                 
                 //PHSUJZH and OHDUQ vigenere decryption
                 
                 String finalAnswer = c.VigenereDecrypt(res, semiParialCipher);
                 
-                System.out.println("After doing Vigenere decryption between "+semiParialCipher+" and "+res+"\n");
-                System.out.println("Final Plain Text we get is : "+finalAnswer+"\n");
+                finalAnswer1 = finalAnswer;
+                //System.out.println("After doing Vigenere decryption between "+semiParialCipher+" and "+res+"\n");
+                //System.out.println("Final Plain Text we get is : "+finalAnswer+"\n");
                 
             }
+            System.out.println("\n\n\n Final Plain Text we get is : "+finalAnswer1+"\n");
         } catch (IOException e) {
             e.printStackTrace();
         }

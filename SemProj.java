@@ -41,14 +41,14 @@ class Cipher3 {
         return res;
     }
     String operation( String s1 , String k1)
-   	{  
-   		 int a=s1.charAt(0);
-   		 int b=k1.charAt(0);
-   		int c= (a)^(b);
-   		String s2 = new Character((char) c).toString();
-   		
-   		return s2;
-   	}
+    {  
+         int a=s1.charAt(0);
+         int b=k1.charAt(0);
+        int c= (a)^(b);
+        String s2 = new Character((char) c).toString();
+        
+        return s2;
+    }
 }
 
 
@@ -56,15 +56,14 @@ class Cipher3 {
 
 public class SemProj
 {
-	public static void main(String args[])
-	{
-		 
-		 
-		 
-		char PT;
+    public static void main(String args[])
+    {
+        char PT;
         String plainText="";
         String PT1="";
-        //Cipher3 c =new Cipher3();
+        String finalAnswer1="";
+        String FinalAnswer="";
+        Cipher3 c =new Cipher3();
         File file = new File(args[0]);
         if (!file.exists()) {
             System.out.println(args[0] + " does not exist.");
@@ -77,49 +76,58 @@ public class SemProj
         try {
             FileInputStream fis = new FileInputStream(file);
             
-            while (fis.available() > 0) {
-		 
-		 
-		 
-		 String LetterKey = "LEARN";
-		 //String plainText = "BAPATLA BAPATLA BAPATLA";
-		 
-		 
-	     String Numberedkey="3";
-		     Cipher3 c =new Cipher3();
-		     String semiParialCipher=c.Keyencode(LetterKey , Integer.parseInt(Numberedkey));//caesar cipher
-		     
-		     String partialCipher = c.VigenereEncrypt(plainText, semiParialCipher);// vigenere cipher
-		     System.out.println("keyCaesar:     "+semiParialCipher );
-		        System.out.println("vigeneer cipher:    "+partialCipher);
-		     String sPartial=partialCipher;
-		     
-		     String res =c.operation( sPartial,Numberedkey); // ex-or operation for first element in string
-				
-				System.out.println(""+res);
-				String FinalAnswer=res;
-				
-				String finalCipher;
-				for(int i=1;i<sPartial.length();i++) // ex-or operation for remaining  elements in string
-				{
-					int a=sPartial.charAt(i);
-					 int b=res.charAt(0);
-					int d= (a)^(b); // ex-or opn
-					 finalCipher = new Character((char) d).toString();
-					//res=res.concat(finalCipher);
-					res=finalCipher;
-					//res=res.concat(finalCipher);
-					
-					//System.out.println(""+finalCipher);
-					FinalAnswer = FinalAnswer.concat(finalCipher);
-					
-					
-				}
-				System.out.println(""+FinalAnswer);
-		}
-        } catch (IOException e) {
+            while (fis.available() > 0) 
+            {
+                PT = (char) fis.read();
+                PT1 = new Character((char) PT).toString();
+                plainText = plainText.concat(PT1);
+
+                String Numberedkey="470";
+                String LetterKey = "ITDEPARTMENT";
+                //String plainText = "BAPATLA ENGINEERING COLLEGE";
+         
+         
+
+
+                //Cipher3 c =new Cipher3();
+                String semiParialCipher=c.Keyencode(LetterKey , Integer.parseInt(Numberedkey));//caesar cipher
+             
+                String partialCipher = c.VigenereEncrypt(plainText, semiParialCipher);// vigenere cipher
+
+                String sPartial=partialCipher;
+             
+                String res =c.operation( sPartial,Numberedkey); // ex-or operation for first element in string
+                
+                
+                FinalAnswer=res;
+                
+                String finalCipher;
+                for(int i=1;i<sPartial.length();i++) // ex-or operation for remaining  elements in string
+                {
+                    int a=sPartial.charAt(i);
+                     int b=res.charAt(0);
+                    int d= (a)^(b); // ex-or opn
+                     finalCipher = new Character((char) d).toString();
+                    //res=res.concat(finalCipher);
+                    res=finalCipher;
+                    //res=res.concat(finalCipher);
+                    
+                    //System.out.println(""+finalCipher);
+                    FinalAnswer = FinalAnswer.concat(finalCipher);
+                    
+                   // finalAnswer1 = finalAnswer1.concat(FinalAnswer);
+                    
+                }
+                
+            }
+            finalAnswer1 = FinalAnswer;
+           System.out.println("\n"+finalAnswer1);
+
+        }
+
+            catch (IOException e) {
             e.printStackTrace();
         }
-    }
-    
+        }
+
 }
