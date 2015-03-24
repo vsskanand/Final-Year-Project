@@ -1,0 +1,26 @@
+
+public class Main {
+ 
+    public static void main(String[] args) {
+        String str="gasd@!dfas%";
+        String newStr="";
+          for (int i=0;i<str.length();i++)
+          {
+              //Ascci range for a-z A-Z
+              if (str.charAt(i)>64&&str.charAt(i)<121)
+              {
+                    newStr+=str.charAt(i);
+                    
+              }
+              
+              
+          }
+         
+         System.out.println("String before filter "+str);
+        System.out.println("String after filter "+newStr);
+        
+ 
+    
+ 
+}
+}

@@ -1,0 +1,8 @@
+String[] stringArray = Pattern.compile("ian").split(
+"This is a sample sentence"
+.replaceAll("[^\\p{Alnum}]+", "") //this will remove all non alpha numeric chars
+);
+
+for (int j=0; i<stringArray .length; j++) {
+  System.out.println(i + " \"" + stringArray [j] + "\"");
+}

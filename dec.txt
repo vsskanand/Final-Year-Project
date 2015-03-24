@@ -1,1 +1,138 @@
-x.{<w9m7u8`)f<k$a$l+q:l6
+
+
+import java.io.*;
+
+class Cipher5 
+{
+   public static String Keyencode(String enc, int offset)
+    {
+        offset = offset % 26 + 26;
+        StringBuilder encoded = new StringBuilder();
+        for (char i : enc.toCharArray()) 
+        {
+            if (Character.isLetter(i)) 
+            {
+                if (Character.isUpperCase(i))
+                {
+                    encoded.append((char) ('A' + (i - 'A' + offset) % 26 ));
+                } 
+                else 
+                {
+                    encoded.append((char) ('a' + (i - 'a' + offset) % 26 ));
+                }
+            }
+            else 
+            {
+                encoded.append(i);
+            }
+        }
+        return encoded.toString();
+    }
+    
+    static String VigenereDecrypt(String text, final String key) {
+        String res = "";
+        text = text.toUpperCase();
+        for (int i = 0, j = 0; i < text.length(); i++) {
+            char c = text.charAt(i);
+            if (c < 'A' || c > 'Z') continue;
+            res += (char)((c - key.charAt(j) + 26) % 26 + 'A');
+            j = ++j % key.length();
+        }
+        return res;
+    }
+    /*
+    static String VigenereEncrypt(String text, final String key) 
+    {
+        String res = "";
+        text = text.toUpperCase();
+        for (int i = 0, j = 0; i < text.length(); i++) 
+        {
+            char c = text.charAt(i);
+            if (c < 'A' || c > 'Z') continue;
+            res += (char)((c + key.charAt(j) - 2 * 'A') % 26 + 'A');
+            j = ++j % key.length();
+        }
+        return res;
+    }*/
+    
+    
+    String operation( String s1 , String k1)
+   	{  
+   		 int a=s1.charAt(0);
+   		 int b=k1.charAt(0);
+   		int c= (a)^(b);
+   		String s2 = new Character((char) c).toString();
+   		
+   		return s2;
+   	}
+}
+
+
+
+
+public class decrypt
+{
+	public static void main(String args[])
+	{
+		 String LetterKey = "LEARN";
+		 String plainText = "{4|*{?w f7d1{8|/c6u1d.|:x+e-n'd1y0f.a)d1{7f?k\"h,b;x-i/v4n9z0y8t=y>d7~:}+~'s#b)p\"m:~0r=q6y*e$h!e\"t2q$l$u-`/u=p:u<s0y/c$g#h8o-|6f0s6t5g$g#k>p7~6y:p8t2p4c)m+~,n(}7`6g2v$t\"w!u%j)x0|;u05~+c,y=|-k:b*{2g+{.h2~0z,`&o-w;q(q6~1r8p#k>s<q$m.f)a9`\"j;c1x\"u3f%h-x>q0*{3e?w:m,g2j=g0y1f,h t\"t0|:u/x-<~)l/h>f(p3~'d>q9c6b-{*}%v#r'~4d)|-f.i<t;k$h-d%m#{(b0v4g)a(~*f3~,d(n,j,z0|-l8p=d&k/x3i(d=t7z2z-z/g>v!t>i0z*e2w6a9w\"d>x;n,f.w5f,{7r0`&k:x3u<>|-n=r36r5y6o<t-a6g=u$|)s?y7<i%r;h;s$n(~/l?x0a9`\"x/c(i%t:k#s!i*y3x-i>t0v;m={9h.b5d=l d't<p!w&i#e)|.~)p$u:r5l=u:c'r\"s*9i8y b/}1r=|0y=u9=y:i;z7a1w5d\"n*}.h$c j9r h;h q){,z-t'q$v0u a*s c0&q\"j%h-n#j3{<k9t>k2v.e*k#i!b,y,o.b4w3b4d#h*z<i#t\"s*n;k:c6p q0y.`1d&b;i>k,v:r%t\"r8s;w\"o<k'v!t3r'h;s1d=t0f<e-j0g>}:r#{(g,j?|";
+
+//in front of any " we have to insert \ ,and the problem is if it is(\")  already present in the cipher then what  we have to do.
+
+	     String Numberedkey="3";
+		     
+			Cipher5 c =new Cipher5();
+		  
+	String semiParialCipher=c.Keyencode(LetterKey , Integer.parseInt(Numberedkey));//caesar cipher -> OHDUQ
+		     
+	String partialCipher = c.VigenereDecrypt(plainText, semiParialCipher);// vigenere cipher
+	
+	
+		     
+	System.out.println("\n Final Key:     "+semiParialCipher );
+	
+	
+	char samp = plainText.charAt(0); // First letter
+		     
+	System.out.println("\n EX - OR of first letter i.e :  "+samp+" and "+ Numberedkey+" we get "+samp+"\n");
+	
+	
+		     
+    //String sPartial=partialCipher;// why ??
+    
+    String sPartial = plainText;
+    
+    String Conv = Character.toString(samp); // string conversion
+
+		     
+	String res =c.operation( Conv, Numberedkey); // ex-or operation for first element in string
+			
+	//System.out.println("\n"+res); // Here comes P
+			
+	String finalCipher;
+			
+	System.out.println(" Final Cipher is : ");		
+	for(int i=1;i<sPartial.length();i++) // ex-or operation for remaining  elements in string
+			
+				{
+					int a=sPartial.charAt(i-1);
+					
+					 int b=sPartial.charAt(i);
+					int d= (a)^(b); // ex-or opn
+					 finalCipher = new Character((char) d).toString();
+					res=res.concat(finalCipher);		
+				}
+				
+				System.out.println(""+res+"\n");
+				
+		//PHSUJZH and OHDUQ vigenere decryption
+				
+		String finalAnswer = c.VigenereDecrypt(res, semiParialCipher);
+		
+		System.out.println("After doing Vigenere decryption between "+semiParialCipher+" and "+res+"\n");
+		System.out.println("Final Plain Text we get is : "+finalAnswer+"\n");
+			
+	
+		}
+
+}
