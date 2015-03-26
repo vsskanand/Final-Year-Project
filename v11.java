@@ -74,12 +74,12 @@ public class v11
 {
 	public static void main(String args[])
 	{
-		 String LetterKey = "LEARN";
-		 String plainText = "{4|*{?w f7d1{8|/c6u1d.|:x+e-n'd1y0f.a)d1{7f?k\"h,b;x-i/v4n9z0y8t=y>d7~:}+~'s#e2p%u=n;q+c+s8i!v5p2h:m4g&d1u'c'j?x9}+i>d/v\"u z9s%m4w>i?n e2f5`(`8`5w a#m8i&w4g({3k q9n-h*b3k2u=t.w-}9w\"p1c6e3{.},n&l9q)k:o$f6o6~9i>m'q={2p*f,u,k#l/e-~6c.a'n\"g&g,u!v#g/{+i?q3`6)x<t#e4{:h9}6f1s\"t$r<y?o)|8j%w\"j'p4y3|5g(b;o9p;s<n4x/~:i8s;|)l.d/v2p8t$}%m/z7x3w;j=n;r9q=j(},z5s&s?m7a2k=k!r8s9q2|)|?~2d'c79v4|,d)l8t%d=3{7n,b$g+|/i c'e2k#d.b;.b*l9h)|5q&l:o+y3a&e,y5b3{+y1x+x0g-k;}(j%p7n,5b.k)y?r'}1w9q2g+|5z/h+o(i<s0c6a4~).i<m\"f.w&n!p(5~+c0q+h;h l;q\"w2g6g-x!u\"c+s v:j)z5f.f1f3{\"j=h\"a%q'r5d,|.f,5~6s)5f+}-k)x>r6a2t8<v%n<t't<m5g0f1h;m8j,i<z-o:k=r4a4x<z3p&o5`&|/f/g)|)}4|+r4r$n\"s2f.c:x2`'d-x4c2z*x0e'i%m8k2~6a&v<t%(}4g4n8{?j r5s:{36g77d7m:v=l-u9l+|.*l6t9s t\"w3a+o7d+";
+		 String LetterKey = "LEARNINGISAMUSTTHINGEVERYONEMUSTDO";
+		 String plainText = "w;~-c;u/{(m7v7p(d>h<w/|?u&r;n#d#k(y!i?y4}6`7s4c0}?i?q#n'p;|4|$q8~2d z({=x5d,k'o>h;r&g3}6~.i;i>|.k\"w5}5:t!k\"d/n\"c-k*f'k'q%d x!x2d3f/i$v!y-l%b;s4`!u>p'q0e4d#s)a-l#d)h s4s$`%c4b6`'e2v0y*|=u/c$v k9i1y+f)o-t'd3z1}?j!j-a9`9a#y0i&~1a7n%k(z6q7`6f.g\"l:k#`+'~9`5}%k1a7r9t?~?j$~*a6r*e,z1+g=r?s\"k?e'i!r\"z8s4v/i+l5l;n+r j#r5b$g3j,k?o+}-h<y7n<r$i*n%w>{2f?m&d6b5r#j2k3j+d>w/c$t7c5x?z\"t#z0q%m9~1|7x*s5o-x5g?r;p$c)/`)l%}5e3`4b/n'j=q w;p8m<l5p9q%h)s*p3f2e2h:i?f+{!{:y4r!f1}){2j't1v'a(p)|1d'~3p:t\"s<j!u1~;c$e,k$w>o9x.`2g0c&|*~9q#f+l/~+n#`5x u?q6q))k<{2b5o7g0~;w!`/y-`7e0x!c$i>{(m\"o)e-8l$c&t!k*b8h8v.c0s<p'p2s>o:h0y+g5z7v8o9r0j:u-a#v=v1}%|%})z;y,f'n'v2p'a j>y0|$a&c4`8q4y(e$c5c6l-;|.|+i;j\"{9h;k=t1e$r?i:v4x?i1k*|(c;h,b+l%a,y;s16e.k(x\"a+n+a&v.w6z#{!p:c!p7z\"w#s;h!c1r;|.g0~-n(p(q a,k!q2q$v;~7q){/j&c){?m9t\"w8m!c+~7n!s=e?m$c.o'l s0i>q8j&i,n4q?j\"v;h!s9`8}6q2s$e2s+|1}/k%k*x!c0r*i\"c;p!`#n!m?k<z7v>r:v7v3a*n-c1`,u3j?~9i\"l>w.w#z2d7m8~)e\"n$b8a0~$i?k**k?f!o;~<y0x1p5r:{4|:~3g7p r;l(d5t#a-e1g=e\"k9l#o%a(m k8w:t&g+d%d(d5|$q%r;|.k=e#v4~3u7d%i.k8j0`)h\"r5t0c+3r;t!x7x<m.f>j#{4x l/n n\"l9o:r#k-y;x)~9z,m?}2w2g!k#{3c;s%u\"{)d=x9c;c(r84s0d-`5p5l+|0|>o*i%|>h#b%c2z#a&j'b-=z t#z=|;s=j9z-n4f0`+f\"g(f,d#s8~9k2u3x9q#v!r?s0i>{8j!f>o:{#v0g?l!q+}7e?~9k;j=q:h*~9j8y5c7v:h/h?x5}?i<n&o;}2s>q$`0{,b.o&t6|3x/n;l x?v?q82{.i!s;t6a'k:v&c&r#b)d.g=|=z#u/u2j.}8j9i%6r:p=u9p$q8}6*i-t\"`-a-o;|&c&d4b1w.{:k(,k;|,~7`$h9x/{>d3q=w-{1<z\"q=n9a.k\"r;y6s4a$a$g!w?k>v\"o7r9~=|5o.o(`3p=s+m<h<u1a%l9a-w&g*m'v1b*x.k<}%t%u\"v?w<{:`7d&o x3i.h2{3d6z(x=m:i/";
 
-//in front of any " we have to insert \ ,and the problem is if it is(\")  already present in the cipher then what  we have to do.
+        //in front of any " we have to insert \ ,and the problem is if it is(\")  already present in the cipher then what  we have to do.
 
-	     String Numberedkey="3";
+	     String Numberedkey="26";
 		     
 			Cipher5 c =new Cipher5();
 		  
